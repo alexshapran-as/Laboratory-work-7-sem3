@@ -1,11 +1,12 @@
+Как создать проект с использованием boost
 
-from Visual Studio's File menu, select New > Project�
+from Visual Studio's File menu, select New > Project…
 
 In the left-hand pane of the resulting New Project dialog, select Visual C++ > Win32.
 
 In the right-hand pane, select Win32 Console Application (VS8.0) or Win32 Console Project (VS7.1).
 
-In the name field, enter �example�
+In the name field, enter “example”
 
 Right-click example in the Solution Explorer pane and select Properties from the resulting pop-up menu
 
@@ -15,12 +16,13 @@ C:\Program Files\boost\boost_1_35_0
 
 In Configuration Properties > C/C++ > Precompiled Headers, change Use Precompiled Header (/Yu) to Not Using Precompiled Headers.3
 
-��� � ��������� ������
+Как компилировать из командной строки
 
 clang-cl /EHsc /I C:\local\boost_1_65_1 lab7_echo_client.cpp -o lab7_echo_client.exe -std=c++11 -w
 
 g++ lab7_echo_client.cpp  -o lab7_echo_client.exe -std=c++11 -I C:\local\boost_1_65_1
 
+Результат компиляции библиотеки boost
 
 The Boost C++ Libraries were successfully built!
 
@@ -30,4 +32,4 @@ The following directory should be added to compiler include paths:
 
 The following directory should be added to linker library paths:
 
-    C:\local\boost_1_65_1\C:\local\boost_1_65_1\vs2010sp1\Win32\lib
+    C:\local\boost_1_65_1\vs2010sp1\Win32\lib
