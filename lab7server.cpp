@@ -50,7 +50,7 @@ private:
 		if (!err) 
 		{
 			index++;
-			std::cout << std::endl << "Ðàáîòà ñ êëèåíòîì id = " << index << std::endl;
+			std::cout << std::endl << "Ð Ð°Ð±Ð¾Ñ‚Ð° Ñ ÐºÐ»Ð¸ÐµÐ½Ñ‚Ð¾Ð¼ id = " << index << std::endl;
 			std::string msg(read_buffer_, bytes);
 			// echo message back, and then stop
 			do_write(msg + "\n");
@@ -101,7 +101,7 @@ void handle_accept(talk_to_client::ptr client, const boost::system::error_code &
 int main() 
 {
 	setlocale(0,"");
-	std::cout << std::endl << "*** Ëàáîðàòîðíàÿ ðàáîòà ¹7: Ðåàëèçàöèÿ ýõî-ñåðâåðà ***" << std::endl;
+	std::cout << std::endl << "*** Ð›Ð°Ð±Ð¾Ñ€Ð°Ñ‚Ð¾Ñ€Ð½Ð°Ñ Ñ€Ð°Ð±Ð¾Ñ‚Ð° â„–7: Ð ÐµÐ°Ð»Ð¸Ð·Ð°Ñ†Ð¸Ñ ÑÑ…Ð¾-ÑÐµÑ€Ð²ÐµÑ€Ð° ***" << std::endl;
 	talk_to_client::ptr client = talk_to_client::new_();
 	acceptor.async_accept(client->sock(), boost::bind(handle_accept, client, _1));
 	service.run();
