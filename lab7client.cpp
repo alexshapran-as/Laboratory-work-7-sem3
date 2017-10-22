@@ -56,14 +56,14 @@ private:
 			SetConsoleCP(1251);
 			SetConsoleOutputCP(1251);
 			std::string copy(read_buffer_, bytes - 1);
-			std::cout << "Ñåðâåð ïðî÷èòàë âàøå ñîîáùåíèå " << message_ << ": "
-				<< (copy == message_ ? "[+] Âåðíî!" : "[-] Îøèáêà!") << " (Ñåðâåð âåðíóë ñîîáùåíèå " << copy << " )" << std::endl;
+			std::cout << "Ð¡ÐµÑ€Ð²ÐµÑ€ Ð¿Ñ€Ð¾Ñ‡Ð¸Ñ‚Ð°Ð» Ð²Ð°ÑˆÐµ ÑÐ¾Ð¾Ð±Ñ‰ÐµÐ½Ð¸Ðµ " << message_ << ": "
+				<< (copy == message_ ? "[+] Ð’ÐµÑ€Ð½Ð¾!" : "[-] ÐžÑˆÐ¸Ð±ÐºÐ°!") << " (Ð¡ÐµÑ€Ð²ÐµÑ€ Ð²ÐµÑ€Ð½ÑƒÐ» ÑÐ¾Ð¾Ð±Ñ‰ÐµÐ½Ð¸Ðµ " << copy << " )" << std::endl;
 			SetConsoleCP(65001);
 			SetConsoleOutputCP(65001);
 		}
 		else
 		{
-			std::cout << std::endl << "[-] Îøèáêà: êîä îøèáêè - " << err << std::endl;
+			std::cout << std::endl << "[-] ÐžÑˆÐ¸Ð±ÐºÐ°: ÐºÐ¾Ð´ Ð¾ÑˆÐ¸Ð±ÐºÐ¸ - " << err << std::endl;
 		}
 		stop();
 	}
@@ -105,10 +105,10 @@ int main()
 {
 	// connect several clients
 	setlocale(0, "");
-	std::cout << std::endl << "*** Ëàáîðàòîðíàÿ ðàáîòà ¹7: Ðåàëèçàöèÿ êëèåíòà ýõî-ñåðâåðà ***" << std::endl;
+	std::cout << std::endl << "*** Ð›Ð°Ð±Ð¾Ñ€Ð°Ñ‚Ð¾Ñ€Ð½Ð°Ñ Ñ€Ð°Ð±Ð¾Ñ‚Ð° â„–7: Ð ÐµÐ°Ð»Ð¸Ð·Ð°Ñ†Ð¸Ñ ÐºÐ»Ð¸ÐµÐ½Ñ‚Ð° ÑÑ…Ð¾-ÑÐµÑ€Ð²ÐµÑ€Ð° ***" << std::endl;
 	std::string message;
 	ip::tcp::endpoint ep(ip::address::from_string("127.0.0.1"), 8001);
-	std::cout << std::endl << "Ââåäèòå ñîîáùåíèå ýõî-ñåðâåðó: ";
+	std::cout << std::endl << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ¾Ð¾Ð±Ñ‰ÐµÐ½Ð¸Ðµ ÑÑ…Ð¾-ÑÐµÑ€Ð²ÐµÑ€Ñƒ: ";
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 	getline(std::cin, message);
